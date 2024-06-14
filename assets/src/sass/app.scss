@@ -1,0 +1,62 @@
+.el-post-form-widget {
+	font-size: 1rem;
+	line-height: 1.5;
+
+	.el-post-form-head, .el-post-form-desc {
+		text-align: center;
+	}
+
+	.el-post-form-label {
+		display: block;
+		margin-bottom: 1rem;
+
+		.el-post-form-label-text {
+			display: inline-block;
+			margin-bottom: .5rem;
+		}
+	}
+
+	.el-post-form-control {
+		display: block;
+		width: 100%;
+		padding: 12px 16px;
+		font-size: .875rem;
+		color: #212529;
+		background-color: #fff;
+		background-clip: padding-box;
+		border: 1px solid #ced4da;
+		appearance: none;
+		border-radius: 4px;
+		transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+		:focus{
+			color: #212529;
+			background-color: #fff;
+			border-color: #86b7fe;
+			outline: 0;
+			box-shadow: 0 0 0 0.25rem rgb(13 110 253 / 25%);
+		}
+	}
+
+	.el-post-form-submit {
+		display: flex;
+		outline: none;
+		cursor: pointer;
+		line-height: 20px;
+		border-radius: 8px;
+		padding: 14px 24px;
+		margin-left: auto;
+		border: none;
+		transition: box-shadow 0.2s ease 0s, -ms-transform 0.1s ease 0s, -webkit-transform 0.1s ease 0s, transform 0.1s ease 0s;
+		background: linear-gradient(to right, rgb(230, 30, 77) 0%, rgb(227, 28, 95) 50%, rgb(215, 4, 102) 100%);
+		text-transform: uppercase;
+		color: #fff;
+	}
+
+	.el-post-form-error {
+		color: red;
+	}
+
+	.el-post-form-info {
+		color: blue;
+	}
+}
