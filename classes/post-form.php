@@ -28,9 +28,9 @@ class Post_Form {
 		$user = wp_get_current_user();
         ob_start(); ?>
 			<section class="el-post-form-widget">
-                <h3 class="el-post-form-head"><?php esc_html_e($settings['title']); ?></h3>
+                <h3 class="el-post-form-head"><?php echo esc_html($settings['title']); ?></h3>
 				<?php if ($user->exists()): ?>
-                    <p class="el-post-form-desc"><?php esc_html_e($settings['description']); ?></p>
+                    <p class="el-post-form-desc"><?php echo esc_html($settings['description']); ?></p>
                     <form class="el-post-form" id="post_form">
                         <label class="el-post-form-label">
                             <span class="el-post-form-label-text">
@@ -50,8 +50,8 @@ class Post_Form {
 										<?php esc_html_e('Select category', 'post-form-addon');?>
                                     </option>
                                     <?php foreach ($categories as $category): ?>
-                                        <option value="<?php esc_attr_e($category->term_id); ?>">
-                                            <?php esc_html_e($category->name);?>
+                                        <option value="<?php echo esc_attr($category->term_id); ?>">
+                                            <?php echo esc_html($category->name);?>
                                         </option>
                                     <?php endforeach; ?>
                                 </select>
