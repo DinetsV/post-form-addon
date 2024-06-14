@@ -13,7 +13,7 @@ class Elementor_Post_Form_Widget extends \Elementor\Widget_Base {
 	}
 
 	public function get_title() {
-		return esc_html__( 'Post Form', 'elementor-addon' );
+		return esc_html__( 'Post Form', 'post-form-addon' );
 	}
 
 	public function get_icon() {

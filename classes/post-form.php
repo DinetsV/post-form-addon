@@ -28,10 +28,10 @@ class Post_Form {
 		$user = wp_get_current_user();
         ob_start(); ?>
 			<section class="el-post-form-widget">
-                <h3 class="el-post-form-head"><?php echo $settings['title']; ?></h3>
+                <h3 class="el-post-form-head"><?php esc_html_e($settings['title']); ?></h3>
 				<?php if ($user->exists()): ?>
-                    <p class="el-post-form-desc"><?php echo $settings['description'] ?></p>
-                    <form action="#" class="el-post-form" id="post_form">
+                    <p class="el-post-form-desc"><?php esc_html_e($settings['description']); ?></p>
+                    <form class="el-post-form" id="post_form">
                         <label class="el-post-form-label">
                             <span class="el-post-form-label-text">
                                 <?php esc_html_e('Title', 'post-form-addon'); ?>
@@ -50,8 +50,8 @@ class Post_Form {
 										<?php esc_html_e('Select category', 'post-form-addon');?>
                                     </option>
                                     <?php foreach ($categories as $category): ?>
-                                        <option value="<?php echo $category->term_id; ?>">
-                                            <?php echo $category->name;?>
+                                        <option value="<?php esc_attr_e($category->term_id); ?>">
+                                            <?php esc_html_e($category->name);?>
                                         </option>
                                     <?php endforeach; ?>
                                 </select>
@@ -88,7 +88,7 @@ class Post_Form {
             <section class="el-post-form-widget">
                 <h3 class="el-post-form-head">{{{ settings.title }}}</h3>
                 <p class="el-post-form-desc">{{{ settings.description }}}</p>
-                <form action="#" class="el-post-form" onsubmit="event.preventDefault();">
+                <form class="el-post-form" onsubmit="event.preventDefault();">
                     <label class="el-post-form-label">
                         <span class="el-post-form-label-text">
 						    <?php esc_html_e('Title', 'post-form-addon'); ?>
